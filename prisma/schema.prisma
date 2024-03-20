@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model userInfo {
+  id              String           @unique @default(uuid())
+  createdAt       DateTime         @default(now()) @map(name: "created_at")
+  updatedAt       DateTime         @default(now()) @map(name: "updated_at")
+  firstname       String?
+  lastname        String?
+  email           String           @unique
+  isEmailVerified Boolean          @map(name: "is_email_verified")
+  isEnable        Boolean          @map(name: "is_enable")
+  userWallets  userWallet[]
+  userSession  userSession[]
+
+  @@map(name: "user_info")
+}
+
+model userWallet {
+  id            String      @unique @default(uuid())
+  createdAt     DateTime    @default(now()) @map(name: "created_at")
+  updatedAt     DateTime    @default(now()) @map(name: "updated_at")
+  userId     String      @map(name: "user_id")
+  walletAddress String      @unique
+  blockchain    Blockchain
+  userInfo   userInfo @relation(fields: [userId], references: [id])
+
+  @@map(name: "user_wallet")
+}
+
+model userSession {
+  id          String      @unique @default(uuid())
+  createdAt   DateTime    @default(now()) @map(name: "created_at")
+  updatedAt   DateTime    @default(now()) @map(name: "updated_at")
+  userId   String      @map(name: "user_id")
+  userInfo userInfo @relation(fields: [userId], references: [id])
+
+  @@map(name: "user_session")
+}
+
+enum Blockchain {
+  solana
+  ethereum
+  cardano
+  injective
+  sui
+}
