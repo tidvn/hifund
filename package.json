@@ -38,7 +38,7 @@
     "@solana/web3.js": "^1.91.1",
     "@tanstack/react-table": "^8.10.7",
     "@types/node": "20.5.7",
-    "@types/react": "18.2.21",
+    "@types/react": "^18.2.67",
     "@types/react-dom": "18.2.7",
     "@uploadthing/react": "^5.7.0",
     "autoprefixer": "10.4.15",
