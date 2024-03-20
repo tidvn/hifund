@@ -5,10 +5,11 @@ import { CSS } from "@dnd-kit/utilities";
 import { cva } from "class-variance-authority";
 import { GripVertical } from "lucide-react";
 import { useMemo } from "react";
-import { Button } from "../ui/button";
-import { Card, CardContent, CardHeader } from "../ui/card";
+
 import { ColumnActions } from "./column-action";
 import { TaskCard } from "./task-card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export interface Column {
   id: UniqueIdentifier;

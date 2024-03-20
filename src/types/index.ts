@@ -30,3 +30,17 @@ export interface FooterItem {
 export type MainNavItem = NavItemWithOptionalChildren;
 
 export type SidebarNavItem = NavItemWithChildren;
+
+export enum BlockchainType {
+  SOLANA = "solana",
+  CARDANO = "cardano",
+  ALEO = "aleo",
+  SHADERUM = "shaderum",
+  NONE = "none"
+}
+
+export enum SolanaNetworkModeEnum {
+  DEV_NET = "devnet",
+  TEST_NET = "testnet",
+  MAIN_NET = "mainnet-beta",
+}
