@@ -24,8 +24,8 @@ import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import FileUpload from "../common/file-upload";
 import { useToast } from "@/components/ui/use-toast";
+import FileUpload from "@/components/common/file-upload";
 const ImgSchema = z.object({
   fileName: z.string(),
   name: z.string(),
