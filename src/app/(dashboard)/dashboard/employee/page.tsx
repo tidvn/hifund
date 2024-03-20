@@ -1,6 +1,6 @@
-import BreadCrumb from "@/components/breadcrumb";
-import { columns } from "@/components/tables/employee-tables/columns";
-import { EmployeeTable } from "@/components/tables/employee-tables/employee-table";
+import BreadCrumb from "@/components/common/breadcrumb";
+import { columns } from "@/components/app/tables/employee-tables/columns";
+import { EmployeeTable } from "@/components/app/tables/employee-tables/employee-table";
 import { buttonVariants } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
