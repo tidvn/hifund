@@ -13,7 +13,7 @@ import { siteConfig } from "@/config/site"
 // Use require instead of import since order matters
 require("@solana/wallet-adapter-react-ui/styles.css")
 require("../styles/globals.css")
-
+require("../styles/sidebar.css")
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
   const network = WalletAdapterNetwork.Devnet
