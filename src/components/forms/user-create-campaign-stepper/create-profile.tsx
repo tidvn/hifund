@@ -291,7 +291,7 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                     Accept terms and conditions
                   </label>
                 </div>
-                <Button><Link href="/dashboard/campaign/1">Submit Campaign</Link></Button>
+                <Button><Link href="/dashboard/campaign/mycampaign">Submit Campaign</Link></Button>
 
               </div>
             )}
