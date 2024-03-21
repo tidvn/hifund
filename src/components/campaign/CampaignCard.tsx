@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './CampaignCard.css'
+import Link from 'next/link';
 interface CampaignCardProps{
     className?:string;
 };
@@ -11,9 +12,8 @@ export default function CampaignCard(props:CampaignCardProps) {
             data-project={113224}
             data-funding-id={1100041}
             className={`sc-8745d327-1 sc-9feed45b-1 cAaXhS jUKeQF ${className}`}>
-            <a
+            <div
                 draggable="false"
-                href="cardano-open-developers/blocktrust-credential-workflow-platform-78b6e.html"
                 className="sc-9feed45b-0 ikUwhB">
                 <div className="sc-8745d327-12 XqVBZ">HiFund Concept: Singers</div>
                 <div data-title-container="true" className="sc-8745d327-3 kUvQUd">
@@ -61,7 +61,7 @@ export default function CampaignCard(props:CampaignCardProps) {
                             fill="currentColor"
                         />
                     </svg>
-                    {/* */}Read more detail
+                    {/* */}<Link href="/dashboard/campaign/1">Read more detail </Link>
                 </button>
                 <hr className="sc-8745d327-11 jfVDXW" />
                 <dl className="sc-9feed45b-3 etjhPf">
@@ -73,7 +73,7 @@ export default function CampaignCard(props:CampaignCardProps) {
                         <dd className="sc-9feed45b-5 bFwqPl">81.3M</dd>
                     </dl>
                 </dl>
-            </a>
+            </div>
         </div>
 
     )

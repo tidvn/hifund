@@ -120,7 +120,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Find creator",
-    href: "/dashboard/user",
+    href: "/dashboard/searching",
     icon: "search",
     label: "Find creator",
   },
@@ -132,32 +132,26 @@ export const navItems: NavItem[] = [
   },
   {
     title: "My Profile",
-    href: "/dashboard/profile",
+    href: "/dashboard/profile/myprofile",
     icon: "profile",
     label: "profile",
   },
   {
     title: "My Campaigns",
-    href: "/dashboard/employee",
+    href: "/dashboard/campaign/mycampaign",
     icon: "newspaper",
     label: "employee",
   },
   {
-    title: "My Suporting Campaigns",
-    href: "/dashboard/employee",
+    title: "Supporting Campaigns",
+    href: "/dashboard/campaign/supporting",
     icon: "helpingHand",
     label: "employee",
   },
   {
-    title: "My Suporters",
-    href: "/dashboard/employee",
+    title: "My Followers",
+    href: "/dashboard/followers",
     icon: "users",
     label: "users",
-  },
-  {
-    title: "Login",
-    href: "/",
-    icon: "login",
-    label: "login",
-  },
+  }
 ];

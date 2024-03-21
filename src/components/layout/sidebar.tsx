@@ -6,6 +6,7 @@ import { UserNav } from "./user-nav";
 import ThemeToggle from "./ThemeToggle/theme-toggle";
 import { Divide, PenSquare, User2 } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 
 export default function Sidebar() {
@@ -21,10 +22,12 @@ export default function Sidebar() {
             </h2>
             <DashboardNav items={navItems} />
             <div className="py-3">
-              <Button className="w-full">
-                <PenSquare size={"1.2em"}/>&nbsp;
-                Create Campaign
-              </Button>
+              <Link href="/dashboard/campaign/create">
+                <Button className="w-full">
+                  <PenSquare size={"1.2em"} />&nbsp;
+                  Create Campaign
+                </Button>
+              </Link>
             </div>
             <div className="absolute bottom-0 left-0 right-0 py-4 px-3 border-t">
               <div className="flex justify-between items-center">
@@ -36,7 +39,7 @@ export default function Sidebar() {
                 </div>
                 <ThemeToggle />
               </div>
-              
+
             </div>
           </div>
         </div>
