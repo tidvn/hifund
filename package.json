@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "fix-lint-errors": "eslint . --fix",
     "prettier": "prettier . --write"
   },
   "dependencies": {
@@ -48,8 +49,9 @@
     "clsx": "^2.1.0",
     "cmdk": "^1.0.0",
     "date-fns": "^2.30.0",
-    "eslint": "8.48.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "^14.0.1",
+    "eslint-plugin-unused-imports": "^3.1.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.359.0",
     "next": "^14.0.1",
@@ -78,7 +80,8 @@
   "devDependencies": {
     "@types/lodash": "^4.17.0",
     "@types/uuid": "^9.0.7",
-    "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "prettier": "3.0.3"
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "eslint-plugin-unused-vars": "^0.0.3",
+    "prettier": "3.2.5"
   }
 }
