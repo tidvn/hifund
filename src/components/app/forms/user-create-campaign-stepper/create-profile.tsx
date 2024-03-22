@@ -1,41 +1,19 @@
 "use client";
-import MilestoneCreateTab from "@/components/campaign/milestones/milestoneCreate";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import MilestoneCreateTab from "@/components/app/campaign/milestones/milestoneCreate";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormItem, FormLabel } from "@/components/ui/form";
 import { Heading } from "@/components/ui/heading";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { profileSchema, type ProfileFormValues } from "@/lib/form-schema";
-import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { AlertTriangleIcon, Trash, Trash2Icon } from "lucide-react";
-import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
-import { SubmitHandler, useFieldArray, useForm } from "react-hook-form";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/tabs/tab"
-import { Checkbox } from "@/components/ui/checkbox"
+import { useForm } from "react-hook-form";
+import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface ProfileFormType {
   initialData: any | null;
@@ -43,24 +21,23 @@ interface ProfileFormType {
 }
 
 export const CreateCampaignOne: React.FC<ProfileFormType> = ({
-  initialData
+  initialData,
 }) => {
-
   const [loading, setLoading] = useState(false);
   const title = "Create Your Campaign";
-  const description = "To create your resume, we first need some information about your campaign.";
+  const description =
+    "To create your resume, we first need some information about your campaign.";
   const [previousStep, setPreviousStep] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
 
-
   const [milestones, setMilestones] = useState([
-    { value: "m1", name: "Milestone 1" }
+    { value: "m1", name: "Milestone 1" },
   ]);
 
   const addMilestone = () => {
     const newMilestone = {
       value: `m${milestones.length + 1}`,
-      name: `Milestone ${milestones.length + 1}`
+      name: `Milestone ${milestones.length + 1}`,
     };
     setMilestones([...milestones, newMilestone]);
   };
@@ -89,7 +66,6 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
     formState: { errors },
   } = form;
 
-
   const steps = [
     {
       id: "Step 1",
@@ -115,7 +91,6 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
       setCurrentStep((step) => step - 1);
     }
   };
-
 
   return (
     <>
@@ -158,16 +133,14 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
       </div>
       <Separator />
       <Form {...form}>
-        <form
-          className="space-y-8 w-full bg-[#faf5ff] p-8 rounded-lg"
-        >
-          <div
-            className={"md:inline-block w-full"}
-          >
+        <form className="space-y-8 w-full bg-[#faf5ff] p-8 rounded-lg">
+          <div className={"md:inline-block w-full"}>
             {currentStep === 0 && (
               <div className="space-y-10">
                 <FormItem>
-                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">Campaign Name</FormLabel>
+                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                    Campaign Name
+                  </FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
@@ -178,7 +151,9 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                 </FormItem>
                 <div className="grid gap-5 grid-cols-2">
                   <FormItem>
-                    <FormLabel className="text-xl font-semibold tracking-tight font-poppins">[GENERAL] Name and surname of main applicant</FormLabel>
+                    <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                      [GENERAL] Name and surname of main applicant
+                    </FormLabel>
                     <FormControl>
                       <Input
                         disabled={loading}
@@ -188,7 +163,9 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                     </FormControl>
                   </FormItem>
                   <FormItem>
-                    <FormLabel className="text-xl font-semibold tracking-tight font-poppins">Total funds request</FormLabel>
+                    <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                      Total funds request
+                    </FormLabel>
                     <FormControl>
                       <Input
                         disabled={loading}
@@ -199,7 +176,10 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                   </FormItem>
                 </div>
                 <FormItem>
-                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">[GENERAL] Are you delivering this project as an individual or as an entity (whether formally incorporated or not)</FormLabel>
+                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                    [GENERAL] Are you delivering this project as an individual
+                    or as an entity (whether formally incorporated or not)
+                  </FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
@@ -209,7 +189,10 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                   </FormControl>
                 </FormItem>
                 <FormItem>
-                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">[GENERAL] Please specify how many months you expect your project to last (from 1-5 weeks)</FormLabel>
+                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                    [GENERAL] Please specify how many months you expect your
+                    project to last (from 1-5 weeks)
+                  </FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
@@ -219,7 +202,10 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                   </FormControl>
                 </FormItem>
                 <FormItem>
-                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">[GENERAL] Summarize your solution to the problem (200-character limit including spaces)</FormLabel>
+                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                    [GENERAL] Summarize your solution to the problem
+                    (200-character limit including spaces)
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       disabled={loading}
@@ -229,7 +215,9 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                   </FormControl>
                 </FormItem>
                 <FormItem>
-                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">[SOLUTION] Please describe your proposed solution.</FormLabel>
+                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                    [SOLUTION] Please describe your proposed solution.
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       disabled={loading}
@@ -239,7 +227,11 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                   </FormControl>
                 </FormItem>
                 <FormItem>
-                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">[CAPABILITY & FEASIBILITY]What is your capability to deliver your project with high levels of trust and accountability? How do you intend to validate if your approach is feasible?</FormLabel>
+                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                    [CAPABILITY & FEASIBILITY]What is your capability to deliver
+                    your project with high levels of trust and accountability?
+                    How do you intend to validate if your approach is feasible?
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       disabled={loading}
@@ -249,19 +241,24 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                   </FormControl>
                 </FormItem>
               </div>
-
             )}
             {currentStep === 1 && (
               <>
-                <Tabs defaultValue="m1" className="w-full bg-[#faf5ff] p-4 rounded-lg">
+                <Tabs
+                  defaultValue="m1"
+                  className="w-full bg-[#faf5ff] p-4 rounded-lg"
+                >
                   <TabsList className="">
-                    {milestones.map(milestone => (
-                      <TabsTrigger key={milestone.value} value={milestone.value}>
+                    {milestones.map((milestone) => (
+                      <TabsTrigger
+                        key={milestone.value}
+                        value={milestone.value}
+                      >
                         {milestone.name}
                       </TabsTrigger>
                     ))}
                   </TabsList>
-                  {milestones.map(milestone => (
+                  {milestones.map((milestone) => (
                     <TabsContent key={milestone.value} value={milestone.value}>
                       <MilestoneCreateTab milestoneName={milestone.name} />
                     </TabsContent>
@@ -291,8 +288,11 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                     Accept terms and conditions
                   </label>
                 </div>
-                <Button><Link href="/dashboard/campaign/mycampaign">Submit Campaign</Link></Button>
-
+                <Button>
+                  <Link href="/dashboard/campaign/mycampaign">
+                    Submit Campaign
+                  </Link>
+                </Button>
               </div>
             )}
           </div>

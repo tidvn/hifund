@@ -1,16 +1,15 @@
-
 import { ScrollArea } from "@/components/ui/scroll-area";
-import cover from '@/public/images/MTP2.png'
-import ava from '@/public/images/MTP.jpg'
+import cover from "@/public/images/MTP2.png";
+import ava from "@/public/images/MTP.jpg";
 import { FaLink } from "react-icons/fa6";
 import { GrStakeholder } from "react-icons/gr";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/tabs/tab"
-import CampaignCard from "@/components/campaign/CampaignCard";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PenSquare } from "lucide-react";
-
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CampaignCard from "@/components/app/campaign/CampaignCard";
 
 export default function page() {
   return (
@@ -20,8 +19,7 @@ export default function page() {
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
-              backgroundImage:
-                `url(${cover.src})`
+              backgroundImage: `url(${cover.src})`,
             }}
           >
             <span
@@ -67,8 +65,8 @@ export default function page() {
                     <div className="py-6 px-3 mt-32 sm:mt-0">
                       <Link href="/dashboard/campaign/create">
                         <Button className="w-fit">
-                          <PenSquare size={"1.2em"} />&nbsp;
-                          Create Campaign
+                          <PenSquare size={"1.2em"} />
+                          &nbsp; Create Campaign
                         </Button>
                       </Link>
                     </div>
@@ -85,13 +83,17 @@ export default function page() {
                         <span className="text-xl font-bold block uppercase tracking-wide text-gray-600">
                           10
                         </span>
-                        <span className="text-sm text-gray-400">Funded&nbsp;Campaigns</span>
+                        <span className="text-sm text-gray-400">
+                          Funded&nbsp;Campaigns
+                        </span>
                       </div>
                       <div className="lg:mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-gray-600">
                           89
                         </span>
-                        <span className="text-sm text-gray-400">Supporters</span>
+                        <span className="text-sm text-gray-400">
+                          Supporters
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -101,16 +103,23 @@ export default function page() {
                     Son Tung MTP
                   </h3>
                   <div className="items-center flex justify-center text-sm leading-normal mt-0 mb-2 text-gray-400 ">
-                    <FaLink size={"1.2em"} />&nbsp;
-                    hifund.com/sontungmtp
+                    <FaLink size={"1.2em"} />
+                    &nbsp; hifund.com/sontungmtp
                   </div>
                   <div className="flex justify-center items-center  mb-2 text-gray-600 mt-10">
-                    <GrStakeholder size={"1.2em"} />&nbsp;&nbsp;
-                    <div className="">My Pool: addr_test1qzegp84qufks983xnfczplquh...</div>
+                    <GrStakeholder size={"1.2em"} />
+                    &nbsp;&nbsp;
+                    <div className="">
+                      My Pool: addr_test1qzegp84qufks983xnfczplquh...
+                    </div>
                   </div>
                   <div className="flex justify-center items-center mb-2 text-gray-600 ">
-                    <MdOutlineAccountBalanceWallet size={"1.2em"} />&nbsp;&nbsp;
-                    <div className="">My Wallet Address: addr_test1qzegp84qufks983xnfczplquhz8l4elzwh...</div>
+                    <MdOutlineAccountBalanceWallet size={"1.2em"} />
+                    &nbsp;&nbsp;
+                    <div className="">
+                      My Wallet Address:
+                      addr_test1qzegp84qufks983xnfczplquhz8l4elzwh...
+                    </div>
                   </div>
                 </div>
                 <div className=" py-5">
@@ -119,13 +128,20 @@ export default function page() {
                       <TabsList className="justify-center">
                         <TabsTrigger value="home">Home</TabsTrigger>
                         <TabsTrigger value="about">About</TabsTrigger>
-                        <TabsTrigger value="myCampaigns">My Campaigns</TabsTrigger>
-                        <TabsTrigger value="mySupportingCampaigns">My Supporting Campaigns</TabsTrigger>
+                        <TabsTrigger value="myCampaigns">
+                          My Campaigns
+                        </TabsTrigger>
+                        <TabsTrigger value="mySupportingCampaigns">
+                          My Supporting Campaigns
+                        </TabsTrigger>
                       </TabsList>
                       <TabsContent value="home" className="flex justify-center">
                         <div className="w-1/2">Feed here</div>
                       </TabsContent>
-                      <TabsContent value="about" className="flex justify-center">
+                      <TabsContent
+                        value="about"
+                        className="flex justify-center"
+                      >
                         <div className=" w-1/2">
                           <div>Artist name: Son Tung MTP</div>
                           <div>Artist name: Son Tung MTP</div>
@@ -153,7 +169,6 @@ export default function page() {
                         </div>
                       </TabsContent>
                     </Tabs>
-
                   </div>
                 </div>
               </div>
@@ -169,8 +184,7 @@ export default function page() {
                       href="https://www.creative-tim.com/product/notus-js"
                       className="text-gray-500 hover:text-gray-800"
                       target="_blank"
-                    >
-                    </a>{" "}
+                    ></a>{" "}
                     by{" "}
                     <a
                       href="https://www.creative-tim.com"

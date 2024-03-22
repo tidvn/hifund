@@ -36,7 +36,7 @@ export enum BlockchainType {
   CARDANO = "cardano",
   ALEO = "aleo",
   SHADERUM = "shaderum",
-  NONE = "none"
+  NONE = "none",
 }
 
 export enum SolanaNetworkModeEnum {

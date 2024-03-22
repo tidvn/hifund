@@ -16,38 +16,50 @@ export default function UserAuthForm() {
   const handleSignIn = async () => {
     setLoading(true);
     try {
-      if (!wallet || !wallet.connected || !wallet.signMessage || !wallet.publicKey) {
+      if (
+        !wallet ||
+        !wallet.connected ||
+        !wallet.signMessage ||
+        !wallet.publicKey
+      ) {
         throw new Error("Wallet not connected");
       }
       const walletAddress = wallet.publicKey.toBase58();
-      const { data: responseData } = await apiGet(`/api/auth/get-nonce?walletAddress=${walletAddress}`);
+      const { data: responseData } = await apiGet(
+        `/api/auth/get-nonce?walletAddress=${walletAddress}`,
+      );
       const nonce = responseData.nonce;
 
       if (isNil(nonce)) {
         throw new Error("cant get nonce at the moment");
       }
 
-      const signature = bs58.encode(await wallet.signMessage(new TextEncoder().encode(nonce)));
+      const signature = bs58.encode(
+        await wallet.signMessage(new TextEncoder().encode(nonce)),
+      );
 
-      await signIn("credentials", { walletAddress, signature, callbackUrl: callbackUrl ?? "/dashboard", });
-
+      await signIn("credentials", {
+        walletAddress,
+        signature,
+        callbackUrl: callbackUrl ?? "/dashboard",
+      });
     } catch (error) {
       console.error("Error signing in", error);
     } finally {
       setLoading(false);
     }
-
-  }
+  };
 
   return (
     <>
-
       <div className="relative">
         <div className="relative flex justify-center text-xs uppercase">
           <ConnectWalletButton.solana className="bg-cover bg-black" />
         </div>
       </div>
-      <Button onClick={handleSignIn} disabled={loading}>Login</Button>
+      <Button onClick={handleSignIn} disabled={loading}>
+        Login
+      </Button>
     </>
   );
 }

@@ -1,5 +1,4 @@
-
-const APP_URL = process.env.APP_URL || "http://localhost:3000"
+const APP_URL = process.env.APP_URL || "http://localhost:3000";
 
 const SITE_CONFIG = {
   name: "Felic.XYZ",
@@ -18,13 +17,9 @@ const SITE_CONFIG = {
     github: "https://github.com/shadcn/ui",
     docs: "https://ui.shadcn.com",
   },
-}
-const BLOCKCHAIN_NETWORK = process.env.NEXT_PUBLIC_BLOCKCHAIN_NETWORK || "DEV_NET"
+};
+const BLOCKCHAIN_NETWORK =
+  process.env.NEXT_PUBLIC_BLOCKCHAIN_NETWORK || "DEV_NET";
 
-const KEY_TOKEN = process.env.KEY_TOKEN || "refreshToken"
-export {
-  APP_URL,
-  KEY_TOKEN,
-  SITE_CONFIG,
-  BLOCKCHAIN_NETWORK,
-}
+const KEY_TOKEN = process.env.KEY_TOKEN || "refreshToken";
+export { APP_URL, KEY_TOKEN, SITE_CONFIG, BLOCKCHAIN_NETWORK };

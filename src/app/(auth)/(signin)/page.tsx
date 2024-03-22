@@ -55,10 +55,8 @@ export default function AuthenticationPage() {
             <h1 className="text-2xl font-semibold tracking-tight">
               Connect Wallet To Login
             </h1>
-           
           </div>
           <UserAuthForm />
-         
         </div>
       </div>
     </div>
