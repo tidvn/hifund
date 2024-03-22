@@ -1,6 +1,4 @@
 import BreadCrumb from "@/components/breadcrumb";
-import { CreateProfileOne } from "@/components/forms/user-profile-stepper/create-profile";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import cover from '@/public/images/MTP2.png'
 import ava from '@/public/images/MTP.jpg'
 import { FaLink } from "react-icons/fa6";
@@ -11,6 +9,7 @@ import CampaignCard from "@/components/campaign/CampaignCard";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { HeartHandshake, PenSquare } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const breadcrumbItems = [{ title: "Profile", link: "/dashboard/profile/1" }];
 
