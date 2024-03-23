@@ -4,16 +4,16 @@ import "./CampaignCard.css";
 import Link from "next/link";
 
 import usdc from "@/public/images/usdc1.png";
+import { CampaignPreview } from "@/types/campaign";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import ava from "@/public/images/MTP.jpg";
 interface CampaignCardProps {
-  className?: string,
-  concept?: string,
-  name?:string,
-  budget?:string,
-  desc?:string,
-  funded?:string
+  className?: string;
+  campain: CampaignPreview;
+  url?:string;
 };
 export default function CampaignCard(props: CampaignCardProps) {
-  let {name,concept,budget,desc, funded,  className } = props;
+  let {url="/dashboard/campaign/1", campain, className } = props;
   return (
     <div
       data-project={113224}
@@ -21,19 +21,19 @@ export default function CampaignCard(props: CampaignCardProps) {
       className={`sc-8745d327-1 sc-9feed45b-1 cAaXhS jUKeQF ${className}`}
     >
       <div draggable="false" className="sc-9feed45b-0 ikUwhB">
-        <div className="sc-8745d327-12 XqVBZ">HiFund Concept: {concept}</div>
+        <div className="sc-8745d327-12 XqVBZ">HiFund Concept: {campain.concept}</div>
         <div data-title-container="true" className="sc-8745d327-3 kUvQUd">
-          <h2 className="sc-8745d327-0 hlLPhh">{name}</h2>
+          <h2 className="sc-8745d327-0 hlLPhh">{campain.name}</h2>
           <div className="sc-8745d327-6 sc-9feed45b-6 gFXFOC jijtLa">
             <div
               role="cell"
               aria-label="Budget"
               className="sc-8745d327-7 jBemPS flex items-center"
             >
-              <img src={usdc.src} alt="" className="w-7 h-7"/>
+              <img src={usdc.src} alt="" className="w-7 h-7" />
               &nbsp;
-              {budget}
-              
+              {campain.budget}
+
             </div>
             <div className="sc-8745d327-9 hHNegW">Budget</div>
           </div>
@@ -48,7 +48,7 @@ export default function CampaignCard(props: CampaignCardProps) {
         >
           <div className="sc-82034fa5-2 ezfdOw" />
           <p className="sc-8745d327-10 KRXNV">
-          {desc}
+            {campain.desc}
           </p>
         </div>
         <button
@@ -72,22 +72,27 @@ export default function CampaignCard(props: CampaignCardProps) {
             />
           </svg>
           {/* */}
-          <Link href="/dashboard/campaign/1">Read more detail </Link>
+          <Link href={url}>Read more detail </Link>
         </button>
         <hr className="sc-8745d327-11 jfVDXW" />
-        <dl className="sc-9feed45b-3 etjhPf">
-          <span className="sc-9feed45b-2 kNCPhJ">Supports{/* */}:</span>
+        <div className="flex justify-between items-center">
           <dl className="sc-9feed45b-3 etjhPf">
-            <dt aria-label="Votes yes" className="sc-9feed45b-4 hLyWJG">
-              Funded
-            </dt>
-            <dd className="sc-9feed45b-5 bFwqPl flex items-center">
-              <img src={usdc.src} alt="" className="w-4 h-4"/>
-              &nbsp;
-              {funded} 
+            <span className="sc-9feed45b-2 kNCPhJ">Supports{/* */}:</span>
+            <dl className="sc-9feed45b-3 etjhPf">
+              <dt aria-label="Votes yes" className="sc-9feed45b-4 hLyWJG">
+                Funded
+              </dt>
+              <dd className="sc-9feed45b-5 bFwqPl flex items-center">
+                <img src={usdc.src} alt="" className="w-4 h-4" />
+                &nbsp;
+                {campain.funded}
               </dd>
+            </dl>
           </dl>
-        </dl>
+          <Avatar className="h-8 w-8 rounded-full border border-black">
+            <AvatarImage src={campain.ava} alt={""} />
+          </Avatar>
+        </div>
       </div>
     </div>
   );

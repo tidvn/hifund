@@ -62,60 +62,6 @@ export default function CampaignDetails() {
           </h2>
           <div className="hidden md:flex items-center space-x-2">
             <CalendarDateRangePicker />
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button><HeartHandshake /> &nbsp;Donate</Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px] ">
-                <DialogHeader>
-                  <DialogTitle>Confirm donate this project</DialogTitle>
-                  <DialogDescription className=" text-left">
-
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="grid gap-4 py-4">
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="name" className="text-left font-bold">
-                      Amount
-                    </Label>
-                    <Input id="name" placeholder="USDC" className="col-span-3" />
-                    <div className="col-span-4 italic text-sm">*The amount does not exceed the amount of the missing fund</div>
-                  </div>
-                  <div className="font-bold">Onboading From: Jan 20, 2023</div>
-                  <div className="font-bold">Onboading From: Feb 09, 2023</div>
-                  <div>
-                    <Label htmlFor="name" className="text-left font-bold">
-                      Platform terms and conditions
-                    </Label>
-                    <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
-                      <li>The amount will be locked in the smart contract as a commitment</li>
-                      <li>Your money will be returned to your wallet if
-                        <ul className="ml-6 list-disc">
-                          <li>The creator confirms cancellation when onboarding ends</li>
-                          <li>Creator's Miletones are not accepted until the deadline</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="terms" />
-                    <label
-                      htmlFor="terms"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Accept terms and conditions
-                    </label>
-                  </div>
-                </div>
-                <DialogFooter>
-                  <Button>
-                    <Link href="/dashboard/campaign/supporting">
-                      Confirm
-                    </Link>
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
           </div>
         </div>
         <div className="p-6 bg-[#faf5ff] w-fit">
@@ -218,19 +164,19 @@ export default function CampaignDetails() {
             Milestones Recap
           </div>
           <Button>
-            <Link href="/dashboard/campaign/1/milestones">
-              Open Milestones Details
+            <Link href="/dashboard/campaign/mycampaign/1/milestones">
+              Submit milestones
             </Link>
           </Button>
           <div className="grid gap-5 grid-cols-3 my-5">
-            <MilestoneRecap milestoneRecap={milestoneRecap[0]} isSupported={false}/>
-            <MilestoneRecap milestoneRecap={milestoneRecap[1]} isSupported={false}/>
-            <MilestoneRecap milestoneRecap={milestoneRecap[2]} isSupported={false}/>
-            <MilestoneRecap milestoneRecap={milestoneRecap[3]} isSupported={false}/>
+            <MilestoneRecap milestoneRecap={milestoneRecap[0]} />
+            <MilestoneRecap milestoneRecap={milestoneRecap[1]} />
+            <MilestoneRecap milestoneRecap={milestoneRecap[2]} />
+            <MilestoneRecap milestoneRecap={milestoneRecap[3]} />
           </div>
           <Button>
-            <Link href="/dashboard/campaign/1/milestones">
-              Open Milestones Details
+            <Link href="/dashboard/campaign/mycampaign/1/milestones">
+              Submit milestones
             </Link>
           </Button>
         </div>

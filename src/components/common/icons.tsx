@@ -34,6 +34,8 @@ import {
   Newspaper,
   HelpingHand,
   Users,
+  Twitch,
+  Flame,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -70,6 +72,7 @@ export const Icons = {
   helpingHand: HelpingHand,
   newspaper: Newspaper,
   users: Users,
+  flame: Flame,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
