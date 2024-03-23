@@ -7,6 +7,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import usdc from "@/public/images/usdc1.png";
 
 export default function CampaignDetails() {
   const [isReadMore, setReadMore] = useState<boolean>(false);
@@ -23,8 +24,10 @@ export default function CampaignDetails() {
           </div>
         </div>
         <div className="p-6 bg-[#faf5ff] w-fit">
-          <div className="text-2xl font-semibold tracking-tight font-poppins">
-            SOLANA 11,200.00
+          <div className="text-2xl font-semibold tracking-tight font-poppins flex items-center">
+            <img src={usdc.src} alt="" className="w-8 h-8" />
+            &nbsp;
+            400
           </div>
           <span>for total milestones and campaign</span>
         </div>
@@ -99,15 +102,15 @@ export default function CampaignDetails() {
               </p>
             </div>
             <div
-              className={`bg-[rgba(250,245,255,0.75)] absolute left-0 bottom-0 right-0 flex justify-center text-blue-600 font-semibold cursor-pointer animate-bounce mt-5 ${!isReadMore && "shadow-inner-top"} mb-5`}
+              className={`bg-[rgba(250,245,255,0.75)] absolute left-0 bottom-0 right-0 flex justify-center text-blue-600 font-semibold cursor-pointer  mt-5 ${!isReadMore && "shadow-inner-top"} mb-5`}
             >
               {!isReadMore ? (
-                <div className="flex" onClick={() => setReadMore(true)}>
+                <div className="flex animate-bounce" onClick={() => setReadMore(true)}>
                   <ChevronDown />
                   Read more
                 </div>
               ) : (
-                <div className="flex" onClick={() => setReadMore(false)}>
+                <div className="flex animate-bounce" onClick={() => setReadMore(false)}>
                   <ChevronUp />
                   Read less
                 </div>
@@ -125,9 +128,9 @@ export default function CampaignDetails() {
             </Link>
           </Button>
           <div className="grid gap-5 grid-cols-3 my-5">
-            <MilestoneRecap milestoneNumber="1" />
-            <MilestoneRecap milestoneNumber="2" />
-            <MilestoneRecap milestoneNumber="3" />
+            <MilestoneRecap milestoneNumber="1" cost="100" startedAt="Week 1 - Apr 2024 " schedule={["10 - Initial payment", "70 -  Day 1", "20 - Day 2",]} />
+            <MilestoneRecap milestoneNumber="2" cost="150" startedAt="Week 2 - Apr 2024 " schedule={["30 - Initial payment", "100 -  Day 1", "20 - Day 2",]} />
+            <MilestoneRecap milestoneNumber="3" cost="150" startedAt="Week 3 - Apr 2024 " schedule={["20 - Initial payment", "100 -  Day 1", "30 - Day 2",]} />
           </div>
           <Button>
             <Link href="/dashboard/campaign/1/milestones">

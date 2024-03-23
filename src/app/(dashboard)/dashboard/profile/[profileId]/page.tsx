@@ -8,7 +8,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/tabs";
+} from "@/components/app/tabs/tab";
 import CampaignCard from "@/components/app/campaign/CampaignCard";
 import { Button } from "@/components/ui/button";
 import { HeartHandshake } from "lucide-react";
@@ -109,19 +109,12 @@ export default function page() {
                     <FaLink size={"1.2em"} />
                     &nbsp; hifund.com/sontungmtp
                   </div>
-                  <div className="flex justify-center items-center  mb-2 text-gray-600 mt-10">
-                    <GrStakeholder size={"1.2em"} />
-                    &nbsp;&nbsp;
-                    <div className="">
-                      My Pool: addr_test1qzegp84qufks983xnfczplquh...
-                    </div>
-                  </div>
                   <div className="flex justify-center items-center mb-2 text-gray-600 ">
                     <MdOutlineAccountBalanceWallet size={"1.2em"} />
                     &nbsp;&nbsp;
                     <div className="">
                       My Wallet Address:
-                      addr_test1qzegp84qufks983xnfczplquhz8l4elzwh...
+                      9Nx39hxM3JZKNqmaqU8QGThM3pHYV4RQPXh71Q1jXMwY
                     </div>
                   </div>
                 </div>
