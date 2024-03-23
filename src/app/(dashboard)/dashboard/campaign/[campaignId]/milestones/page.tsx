@@ -5,12 +5,12 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useState } from "react";
 import MilestoneDetailsTab from "@/components/app/campaign/milestones/milestoneDetails";
 import { CalendarDateRangePicker } from "@/components/common/date-range-picker";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/app/tabs/tab";
+import usdc from "@/public/images/usdc1.png";
+interface MilestonesDetailsProps {
+  className?: string;
+
+}
 
 export default function MilestonesDetails() {
   const [isReadMore, setReadMore] = useState<boolean>(false);
@@ -27,8 +27,10 @@ export default function MilestonesDetails() {
           </div>
         </div>
         <div className="p-6 bg-[#faf5ff] w-fit">
-          <div className="text-2xl font-semibold tracking-tight font-poppins">
-            SOLANA 11,200.00
+          <div className="text-2xl font-semibold tracking-tight font-poppins flex items-center">
+            <img src={usdc.src} alt="" className="w-8 h-8" />
+            &nbsp;
+            400
           </div>
           <span>for total milestones and campaign</span>
         </div>
@@ -47,16 +49,16 @@ export default function MilestonesDetails() {
               <TabsTrigger value="mfinal">Milestone Final</TabsTrigger>
             </TabsList>
             <TabsContent value="m1">
-              <MilestoneDetailsTab milestoneName="1" />
+              <MilestoneDetailsTab milestoneName="1" submitedAt="February 21, 2024 at 6:15 AM" title="Chung Ta Cua Tuong Lai" outputs={{promise:["A functional command-line debugger for UPLC"],result:["1","0"]}} criteria={{promise:["Debugger allows for the execution of UPLC code step-by-step", " Capability to display terms in scope and call stack on command", "Usable in a standard development environment"],result:["1","0"]}} evidence={{promise:["Release of the debugger tool on GitHub","Documentation outlining usage and capabilities","A video demonstration of the debugger in action"],result:["1","0"]}} delivery="Week 1" cost={{promise:["30.00%", "100"],result:["1","0"]}} completion="50%"/>
             </TabsContent>
             <TabsContent value="m2">
-              <MilestoneDetailsTab milestoneName="2" />
+            <MilestoneDetailsTab milestoneName="2" submitedAt="February 21, 2024 at 6:15 AM" title="Chung Ta Cua Tuong Lai" outputs={{promise:["A functional command-line debugger for UPLC"],result:["1","0"]}} criteria={{promise:["Debugger allows for the execution of UPLC code step-by-step", " Capability to display terms in scope and call stack on command", "Usable in a standard development environment"],result:["1","0"]}} evidence={{promise:["Release of the debugger tool on GitHub","Documentation outlining usage and capabilities","A video demonstration of the debugger in action"],result:["1","0"]}} delivery="Week 1" cost={{promise:["30.00%", "100"],result:["1","0"]}} completion="50%"/>
             </TabsContent>
             <TabsContent value="m3">
-              <MilestoneDetailsTab milestoneName="3" />
+            <MilestoneDetailsTab milestoneName="3" submitedAt="February 21, 2024 at 6:15 AM" title="Chung Ta Cua Tuong Lai" outputs={{promise:["A functional command-line debugger for UPLC"],result:["1","0"]}} criteria={{promise:["Debugger allows for the execution of UPLC code step-by-step", " Capability to display terms in scope and call stack on command", "Usable in a standard development environment"],result:["1","0"]}} evidence={{promise:["Release of the debugger tool on GitHub","Documentation outlining usage and capabilities","A video demonstration of the debugger in action"],result:["1","0"]}} delivery="Week 1" cost={{promise:["30.00%", "100"],result:["1","0"]}} completion="50%"/>
             </TabsContent>
             <TabsContent value="mfinal">
-              <MilestoneDetailsTab milestoneName="Final" />
+            <MilestoneDetailsTab milestoneName="4" submitedAt="February 21, 2024 at 6:15 AM" title="Chung Ta Cua Tuong Lai" outputs={{promise:["A functional command-line debugger for UPLC"],result:["1","0"]}} criteria={{promise:["Debugger allows for the execution of UPLC code step-by-step", " Capability to display terms in scope and call stack on command", "Usable in a standard development environment"],result:["1","0"]}} evidence={{promise:["Release of the debugger tool on GitHub","Documentation outlining usage and capabilities","A video demonstration of the debugger in action"],result:["1","0"]}} delivery="Week 1" cost={{promise:["30.00%", "100"],result:["1","0"]}} completion="50%"/>
             </TabsContent>
           </Tabs>
         </div>

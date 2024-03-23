@@ -7,16 +7,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import usdc from "@/public/images/usdc1.png";
 import { Label } from "@/components/ui/label";
 
 interface MilestoneRecapProps {
   milestoneNumber?: string;
   className?: string;
+  cost?: string;
+  startedAt?: string;
+  schedule?: string[];
+
 }
 
 export function MilestoneRecap(props: MilestoneRecapProps) {
-  let { milestoneNumber = "0", className } = props;
+  let { cost, startedAt, schedule, milestoneNumber = "0", className } = props;
   return (
     <Card className={`bg-[#faf5ff] outline-none border-0 ${className}`}>
       <CardHeader>
@@ -42,22 +46,28 @@ export function MilestoneRecap(props: MilestoneRecapProps) {
               <Label htmlFor="name" className="text-gray-400">
                 Milestone cost:
               </Label>
-              <Label className="font-bold text-2xl">SOL 42,000.00</Label>
+              <Label className="font-bold text-2xl flex items-center">
+                <img src={usdc.src} alt="" className="w-7 h-7" />
+                &nbsp;
+                {cost}
+              </Label>
             </div>
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name" className="text-gray-400">
                 Stated delivery on:
               </Label>
-              <Label className="font-bold text-xl">Week 1 - Jun 2024</Label>
+              <Label className="font-bold text-xl">{startedAt}</Label>
             </div>
             <div className="bg-[#eceffe] p-4 font-semibold">
               <p className="leading-7 [&:not(:first-child)]:mt-6">
                 Payments schedule:
               </p>
               <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
-                <li>SOL 11,200.00 - Initial payment</li>
-                <li>SOL 11,200.00 - Month 1</li>
-                <li>SOL 11,200.00 - Month 2</li>
+                {schedule?.map((x, i) =>
+                  <li key={i} className="flex items-center">
+                    <img src={usdc.src} alt="" className="w-7 h-7" />
+                    &nbsp;{x}</li>
+                )}
               </ul>
             </div>
           </div>

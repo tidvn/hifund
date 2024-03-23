@@ -2,11 +2,18 @@ import React from "react";
 
 import "./CampaignCard.css";
 import Link from "next/link";
+
+import usdc from "@/public/images/usdc1.png";
 interface CampaignCardProps {
-  className?: string;
-}
+  className?: string,
+  concept?: string,
+  name?:string,
+  budget?:string,
+  desc?:string,
+  funded?:string
+};
 export default function CampaignCard(props: CampaignCardProps) {
-  let { className } = props;
+  let {name,concept,budget,desc, funded,  className } = props;
   return (
     <div
       data-project={113224}
@@ -14,16 +21,19 @@ export default function CampaignCard(props: CampaignCardProps) {
       className={`sc-8745d327-1 sc-9feed45b-1 cAaXhS jUKeQF ${className}`}
     >
       <div draggable="false" className="sc-9feed45b-0 ikUwhB">
-        <div className="sc-8745d327-12 XqVBZ">HiFund Concept: Singers</div>
+        <div className="sc-8745d327-12 XqVBZ">HiFund Concept: {concept}</div>
         <div data-title-container="true" className="sc-8745d327-3 kUvQUd">
-          <h2 className="sc-8745d327-0 hlLPhh">Chung Ta Cua Tuong Lai</h2>
+          <h2 className="sc-8745d327-0 hlLPhh">{name}</h2>
           <div className="sc-8745d327-6 sc-9feed45b-6 gFXFOC jijtLa">
             <div
               role="cell"
               aria-label="Budget"
-              className="sc-8745d327-7 jBemPS"
+              className="sc-8745d327-7 jBemPS flex items-center"
             >
-              200K
+              <img src={usdc.src} alt="" className="w-7 h-7"/>
+              &nbsp;
+              {budget}
+              
             </div>
             <div className="sc-8745d327-9 hHNegW">Budget</div>
           </div>
@@ -38,9 +48,7 @@ export default function CampaignCard(props: CampaignCardProps) {
         >
           <div className="sc-82034fa5-2 ezfdOw" />
           <p className="sc-8745d327-10 KRXNV">
-            Atala PRISM v2 provides SSI infrastructure in the form of SDKs, yet
-            we still lack a simple method to integrate our digital identity into
-            all…
+          {desc}
           </p>
         </div>
         <button
@@ -68,12 +76,16 @@ export default function CampaignCard(props: CampaignCardProps) {
         </button>
         <hr className="sc-8745d327-11 jfVDXW" />
         <dl className="sc-9feed45b-3 etjhPf">
-          <span className="sc-9feed45b-2 kNCPhJ">Votes{/* */}:</span>
+          <span className="sc-9feed45b-2 kNCPhJ">Supports{/* */}:</span>
           <dl className="sc-9feed45b-3 etjhPf">
             <dt aria-label="Votes yes" className="sc-9feed45b-4 hLyWJG">
-              Yes
+              Funded
             </dt>
-            <dd className="sc-9feed45b-5 bFwqPl">81.3M</dd>
+            <dd className="sc-9feed45b-5 bFwqPl flex items-center">
+              <img src={usdc.src} alt="" className="w-4 h-4"/>
+              &nbsp;
+              {funded} 
+              </dd>
           </dl>
         </dl>
       </div>
