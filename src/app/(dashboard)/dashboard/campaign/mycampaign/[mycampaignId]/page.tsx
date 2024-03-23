@@ -4,24 +4,11 @@ import { MilestoneRecap } from "@/components/app/campaign/milestones/milestoneRe
 import { CalendarDateRangePicker } from "@/components/common/date-range-picker";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronDown, ChevronUp, HeartHandshake } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import usdc from "@/public/images/usdc1.png";
 import { MilestoneRecapCard } from "@/types/milestones";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Checkbox } from "@/components/ui/checkbox"
-
 
 const milestoneRecap: MilestoneRecapCard[] = [
   {

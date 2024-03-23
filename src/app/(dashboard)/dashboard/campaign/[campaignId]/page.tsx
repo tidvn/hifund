@@ -92,7 +92,7 @@ export default function CampaignDetails() {
                       <li>Your money will be returned to your wallet if
                         <ul className="ml-6 list-disc">
                           <li>The creator confirms cancellation when onboarding ends</li>
-                          <li>Creator's Miletones are not accepted until the deadline</li>
+                          <li>Creators Miletones are not accepted until the deadline</li>
                         </ul>
                       </li>
                     </ul>

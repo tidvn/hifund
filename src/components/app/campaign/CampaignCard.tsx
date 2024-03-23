@@ -6,7 +6,6 @@ import Link from "next/link";
 import usdc from "@/public/images/usdc1.png";
 import { CampaignPreview } from "@/types/campaign";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import ava from "@/public/images/MTP.jpg";
 interface CampaignCardProps {
   className?: string;
   campain: CampaignPreview;

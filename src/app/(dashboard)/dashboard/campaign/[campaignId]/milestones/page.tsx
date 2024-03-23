@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useState } from "react";
 import MilestoneDetailsTab from "@/components/app/campaign/milestones/milestoneDetails";
 import { CalendarDateRangePicker } from "@/components/common/date-range-picker";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/app/tabs/tab";
@@ -175,7 +174,7 @@ export default function MilestonesDetails() {
                       <li>Your money will be returned to your wallet if
                         <ul className="ml-6 list-disc">
                           <li>The creator confirms cancellation when onboarding ends</li>
-                          <li>Creator's Miletones are not accepted until the deadline</li>
+                          <li>Creators Miletones are not accepted until the deadline</li>
                         </ul>
                       </li>
                     </ul>

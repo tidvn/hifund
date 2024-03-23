@@ -34,7 +34,6 @@ import {
   Newspaper,
   HelpingHand,
   Users,
-  Twitch,
   Flame,
 } from "lucide-react";
 

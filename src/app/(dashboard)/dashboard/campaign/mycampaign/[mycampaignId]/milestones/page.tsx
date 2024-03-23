@@ -1,15 +1,12 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useState } from "react";
 import MilestoneDetailsTab from "@/components/app/campaign/milestones/milestoneDetails";
 import { CalendarDateRangePicker } from "@/components/common/date-range-picker";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/app/tabs/tab";
 import usdc from "@/public/images/usdc1.png";
 import { MilestoneDetails } from "@/types/milestones";
 import MilestoneSubmit from "@/components/app/campaign/milestones/milestoneSubmit";
-import MilestoneConfirm from "@/components/app/campaign/milestones/milestoneConfirm";
 
 const milestoneDetails: MilestoneDetails[] = [
   {

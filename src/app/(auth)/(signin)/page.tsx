@@ -33,9 +33,9 @@ export default function AuthenticationPage() {
           <blockquote className="space-y-2">
             <p className="text-lg text-justify italic">
               &ldquo;This Flash Funding Platform Centralize, the flash fund
-              mechanism as  the platform's foundational feature. This model supports quick funding for
+              mechanism as  the platform is foundational feature. This model supports quick funding for
               projects with immediate needs, facilitating a dynamic and responsive funding environment.
-              It’s designed to be flexible and applicable across various markets, ensuring broad usability .&rdquo;
+              It is designed to be flexible and applicable across various markets, ensuring broad usability .&rdquo;
             </p>
             <footer className="text-md text-right">~ 2Fund Team ~</footer>
           </blockquote>
