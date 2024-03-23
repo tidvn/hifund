@@ -1,6 +1,4 @@
 import React from "react";
-import cover from "@/public/images/MTP2.png";
-import ava from "@/public/images/MTP.jpg";
 import Link from "next/link";
 
 interface CreatorCardProps {

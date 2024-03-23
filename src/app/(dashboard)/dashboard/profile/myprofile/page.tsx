@@ -3,7 +3,6 @@ import cover from "@/public/images/MTP2.png";
 import ava from "@/public/images/MTP.jpg";
 
 import { FaLink } from "react-icons/fa6";
-import { GrStakeholder } from "react-icons/gr";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 
 import Link from "next/link";

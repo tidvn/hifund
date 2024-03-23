@@ -64,7 +64,7 @@ export function MilestoneRecap(props: MilestoneRecapProps) {
               </p>
               <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
                 {schedule?.map((x, i) =>
-                  <li className="flex items-center">
+                  <li key={i} className="flex items-center">
                     <img src={usdc.src} alt="" className="w-7 h-7" />
                     &nbsp;{x}</li>
                 )}

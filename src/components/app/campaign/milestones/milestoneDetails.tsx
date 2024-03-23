@@ -7,7 +7,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import { result } from "lodash";
 
 interface MilestoneDetailsTabProps {
   milestoneName?: string;
@@ -59,7 +58,7 @@ export default function MilestoneDetailsTab(props: MilestoneDetailsTabProps) {
             </TableHead>
             <TableCell className="border border-slate-400">
                {outputs?.promise?.map((x, i) =>
-                <div>{x}</div>
+                <div key={i}>{x}</div>
               )}
             </TableCell>
             <TableCell className="border border-slate-400">
@@ -86,7 +85,7 @@ export default function MilestoneDetailsTab(props: MilestoneDetailsTabProps) {
               <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
                 {
                   criteria?.promise?.map((x, i) =>
-                    <li>
+                    <li key={i}>
                       {x}
                     </li>
                   )
@@ -119,7 +118,7 @@ export default function MilestoneDetailsTab(props: MilestoneDetailsTabProps) {
                 
                 {
                   evidence?.promise?.map((x, i) =>
-                    <li>
+                    <li key={i}>
                       {x}
                     </li>
                   )
@@ -158,7 +157,7 @@ export default function MilestoneDetailsTab(props: MilestoneDetailsTabProps) {
             <TableCell className="border border-slate-400">
               {
                   cost?.promise?.map((x, i) =>
-                    <div className="font-semibold text-2xl">
+                    <div key={i} className="font-semibold text-2xl">
                       {x}
                     </div>
                   )
