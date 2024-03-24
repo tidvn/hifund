@@ -33,7 +33,8 @@ import {
   Bell,
   Newspaper,
   HelpingHand,
-  Users
+  Users,
+  Flame,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -69,7 +70,8 @@ export const Icons = {
   bell: Bell,
   helpingHand: HelpingHand,
   newspaper: Newspaper,
-  users:Users,
+  users: Users,
+  flame: Flame,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

@@ -226,7 +226,9 @@ export function KanbanBoard() {
                 <BoardColumn
                   isOverlay
                   column={activeColumn}
-                  tasks={tasks.filter((task) => task.status === activeColumn.id)}
+                  tasks={tasks.filter(
+                    (task) => task.status === activeColumn.id,
+                  )}
                 />
               )}
               {activeTask && <TaskCard task={activeTask} isOverlay />}

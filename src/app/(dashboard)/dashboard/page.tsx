@@ -1,35 +1,17 @@
-import { CalendarDateRangePicker } from "@/components/common/date-range-picker";
-import { Overview } from "@/components/common/overview";
-import { RecentSales } from "@/components/common/recent-sales";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
+
+
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function page() {
   return (
     <ScrollArea className="h-full">
-      <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-        <div className="flex items-center justify-between space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight">
-            Hi, Welcome back 👋
-          </h2>
-          <div className="hidden md:flex items-center space-x-2">
-            <CalendarDateRangePicker />
-            <Button>Download</Button>
-          </div>
-        </div>
+      <div className="flex-1 space-y-4 px-4">
         <>
           {/* Wrapper*/}
           <div className="wrapper">
             {/* Toggle theme */}
-            <div className="flex items-center justify-center py-3">
+            <div className="flex items-center justify-center pb-3">
               <button
                 id="theme-toggle"
                 type="button"
@@ -127,8 +109,8 @@ export default function page() {
                   </div>
                 </div>
                 <p className="dark:text-slate-200">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="py-4">
                   <a className="inline-flex items-center" href="#">
@@ -182,7 +164,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Leslie Alexander
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -191,7 +176,10 @@ export default function page() {
                       </div>
                       <p>Lorem ipsum dolor sit amet, consectetur.</p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -220,7 +208,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Tina Mills
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -229,7 +220,10 @@ export default function page() {
                       </div>
                       <p>Dolor sit ameteiusmod consectetur adipiscing elit.</p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -273,7 +267,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Esther Howard
                         </a>
                         <span>
@@ -303,8 +300,8 @@ export default function page() {
                   </a>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="py-4">
                   <a className="inline-flex items-center" href="#">
@@ -358,7 +355,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Ronald Richards
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -366,11 +366,14 @@ export default function page() {
                         </span>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                        eiusmod 😀😀😀
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        sed do eiusmod 😀😀😀
                       </p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -399,7 +402,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Natalia Jímenez
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -408,7 +414,10 @@ export default function page() {
                       </div>
                       <p>Dolor sit ameteiusmod consectetur adipiscing elit.</p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -453,7 +462,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Leonard Isom
                         </a>
                       </div>
@@ -484,8 +496,9 @@ export default function page() {
                 </h2>
                 <div className="py-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
                 </div>
                 <div className="py-4">
@@ -542,7 +555,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Eduardo
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -560,8 +576,9 @@ export default function page() {
                 </h2>
                 <div className="py-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
                 </div>
                 <div className="py-4">
@@ -616,7 +633,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Shawn
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -624,11 +644,14 @@ export default function page() {
                         </span>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                        eiusmod.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        sed do eiusmod.
                       </p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -657,7 +680,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Dianne Russell
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -665,11 +691,15 @@ export default function page() {
                         </span>
                       </div>
                       <p>
-                        Dolor sit ameteiusmod Dolor sit ameteiusmod 😍😍✌🤪consectetur
-                        adipiscing elitconsectetur adipiscing elit.
+                        Dolor sit ameteiusmod Dolor sit ameteiusmod
+                        😍😍✌🤪consectetur adipiscing elitconsectetur
+                        adipiscing elit.
                       </p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -714,7 +744,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Anna Bernal
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -756,8 +789,9 @@ export default function page() {
                 </h2>
                 <div className="py-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
                 </div>
                 <div className="py-4">
@@ -812,7 +846,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Jerome Bell
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -820,11 +857,14 @@ export default function page() {
                         </span>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                        eiusmod.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        sed do eiusmod.
                       </p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -853,7 +893,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Eleanor Pena
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -861,11 +904,15 @@ export default function page() {
                         </span>
                       </div>
                       <p>
-                        Dolor sit ameteiusmod Dolor sit ameteiusmod 😍😍✌🤪consectetur
-                        adipiscing elitconsectetur adipiscing elit.
+                        Dolor sit ameteiusmod Dolor sit ameteiusmod
+                        😍😍✌🤪consectetur adipiscing elitconsectetur
+                        adipiscing elit.
                       </p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -958,7 +1005,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Savannah Nguyen
                         </a>
                       </div>
@@ -973,8 +1023,9 @@ export default function page() {
                 </h2>
                 <div className="py-4">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
                 </div>
                 <div className="py-4">
@@ -1031,7 +1082,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Annette Black
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -1129,7 +1183,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Cameron Williamson
                         </a>
                         <span>
@@ -1148,13 +1205,13 @@ export default function page() {
                   </div>
                 </div>
                 <p className="pr-6 pl-6 pb-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <div className="p-6 bg-gradient-to-r from-cyan-500 to-blue-500">
                   <h2 className="text-3xl text-white font-extrabold">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                    eiusmod.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                    do eiusmod.
                   </h2>
                 </div>
                 <div className="p-6">
@@ -1211,7 +1268,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Kristin Watson
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -1219,10 +1279,14 @@ export default function page() {
                         </span>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit seddo
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        seddo
                       </p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -1251,7 +1315,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Melvin D. Goodman
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -1260,7 +1327,10 @@ export default function page() {
                       </div>
                       <p>Dolor sit ameteiusmod consectetur adipiscing elit.</p>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -1289,7 +1359,10 @@ export default function page() {
                     </a>
                     <div className="media-body">
                       <div>
-                        <a className="inline-block text-base font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-base font-bold mr-2"
+                          href="#"
+                        >
                           Erik Moore
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -1306,7 +1379,10 @@ export default function page() {
                         </a>
                       </div>
                       <div className="mt-2 flex items-center">
-                        <a className="inline-flex items-center py-2 mr-3" href="#">
+                        <a
+                          className="inline-flex items-center py-2 mr-3"
+                          href="#"
+                        >
                           <span className="mr-2">
                             <svg
                               className="fill-rose-600 dark:fill-rose-400"
@@ -1351,7 +1427,10 @@ export default function page() {
                     </a>
                     <div className="flex flex-col">
                       <div className="flex items-center">
-                        <a className="inline-block text-lg font-bold mr-2" href="#">
+                        <a
+                          className="inline-block text-lg font-bold mr-2"
+                          href="#"
+                        >
                           Marylin B. Bechtol
                         </a>
                         <span className="text-slate-500 dark:text-slate-300">
@@ -1366,20 +1445,36 @@ export default function page() {
                 </div>
                 <p className="pr-6 pl-6 pb-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                  eiusmodelit sed do eiusmodelit sed do eiusmodelit sed do eiusmod
-                  <a href="#" className="font-medium text-blue-700 dark:text-blue-500">
+                  eiusmodelit sed do eiusmodelit sed do eiusmodelit sed do
+                  eiusmod
+                  <a
+                    href="#"
+                    className="font-medium text-blue-700 dark:text-blue-500"
+                  >
                     #ui
                   </a>
-                  <a href="#" className="font-medium text-blue-700 dark:text-blue-500">
+                  <a
+                    href="#"
+                    className="font-medium text-blue-700 dark:text-blue-500"
+                  >
                     #uxui
                   </a>
-                  <a href="#" className="font-medium text-blue-700 dark:text-blue-500">
+                  <a
+                    href="#"
+                    className="font-medium text-blue-700 dark:text-blue-500"
+                  >
                     #userinterface
                   </a>
-                  <a href="#" className="font-medium text-blue-700 dark:text-blue-500">
+                  <a
+                    href="#"
+                    className="font-medium text-blue-700 dark:text-blue-500"
+                  >
                     #webdeveloper
                   </a>
-                  <a href="#" className="font-medium text-blue-700 dark:text-blue-500">
+                  <a
+                    href="#"
+                    className="font-medium text-blue-700 dark:text-blue-500"
+                  >
                     #card
                   </a>
                 </p>
@@ -1459,9 +1554,7 @@ export default function page() {
             </div>
           </div>
           {/* End Wrapper*/}
-
         </>
-
       </div>
     </ScrollArea>
   );

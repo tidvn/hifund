@@ -1,8 +1,10 @@
-import BreadCrumb from "@/components/breadcrumb";
-import { CreateCampaignOne } from "@/components/forms/user-create-campaign-stepper/create-profile";
+import BreadCrumb from "@/components/common/breadcrumb";
+import { CreateCampaignOne } from "@/components/app/forms/user-create-campaign-stepper/create-profile";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-const breadcrumbItems = [{ title: "Create Campaign", link: "/dashboard/campaign/create" }];
+const breadcrumbItems = [
+  { title: "Create Campaign", link: "/dashboard/campaign/create" },
+];
 export default function page() {
   return (
     <ScrollArea className="h-full">
