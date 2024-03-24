@@ -1,6 +1,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
-import cover from "@/public/images/MTP2.png";
-import ava from "@/public/images/MTP.jpg";
+import cover from "@/public/images/avatar2.jpg";
+import ava from "@/public/images/avatar.jpg";
 
 import { FaLink } from "react-icons/fa6";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
@@ -154,18 +154,18 @@ export default function page() {
                 </div>
                 <div className="text-center mt-2">
                   <h3 className="text-3xl font-semibold leading-normal mb-2 text-gray-700">
-                 Son Tung MTP
+                  John Stone
                   </h3>
                   <div className="items-center flex justify-center text-sm leading-normal mt-0 mb-2 text-gray-400 ">
                     <FaLink size={"1.2em"} />
-                    &nbsp; hifund.com/JoneStone
+                    &nbsp; hifund.com/JohnStone
                   </div>
                   <div className="flex justify-center items-center mb-2 text-gray-600 ">
                     <MdOutlineAccountBalanceWallet size={"1.2em"} />
                     &nbsp;&nbsp;
                     <div className="">
                       My Wallet Address:
-                      9Nx39hxM3JZKNqmaqU8QGThM3pHYV4RQPXh71Q1jXMwY
+                      BCv9iHG8nyBFvJwoW1dJCjd3C1WVBBDE5V2iAHzE1fQ7
                     </div>
                   </div>
                 </div>

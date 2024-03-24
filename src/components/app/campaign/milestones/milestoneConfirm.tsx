@@ -12,7 +12,7 @@ export default function MilestoneConfirm(props: MilestoneConfirmProps) {
     return (
         <div className="p-8">
             <div className="text-2xl font-bold tracking-tight font-poppins mb-10">
-                Submission for milestone {milestone.milestoneName}
+                Confirm milestone {milestone.milestoneName}
             </div>
             <div className='rounded-xl p-8 bg-white border mb-6'>
                 <div className='font-semibold'>Expected Output</div>
