@@ -30,7 +30,7 @@ export default function Sidebar() {
                 <div className="flex items-center">
                   <UserNav />
                   <div className="ms-2">
-                    <div className="text-sm font-semibold">Son Tung MTP</div>
+                    <div className="text-sm font-semibold">John Stone</div>
                   </div>
                 </div>
                 <ThemeToggle />

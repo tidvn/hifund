@@ -75,7 +75,7 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
       id: "Step 2",
       name: "Milestones Settings",
     },
-    { id: "Step 3", name: "Complete" },
+    { id: "Step 3", name: "Customize Smart Contract" },
   ];
 
   const next = async () => {
@@ -278,7 +278,44 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
             )}
             {currentStep === 2 && (
               <div>
-                <h1>Completed</h1>
+                <div className="space-y-10">
+                  <FormItem>
+                    <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                      [CONTRAINT] Deadline Campaign Onboarding (Campaign on pending in Onboarding page until)
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={loading}
+                        type="date"
+                        className="bg-white"
+                      />
+                    </FormControl>
+                  </FormItem>
+                  <FormItem>
+                    <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                      [CONTRAINT] Deadline Finishing Campaign At
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={loading}
+                        type="date"
+                        className="bg-white"
+                      />
+                    </FormControl>
+                  </FormItem>
+                </div>
+                <FormItem className="mt-10">
+                  <FormLabel className="text-xl font-semibold tracking-tight font-poppins">
+                    Platform terms and conditions
+                  </FormLabel>
+                  <FormControl>
+                    <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
+                        <li>Funds will be disbursed according to milestones if confirmed by the supporter.</li>
+                        <li>When the onboarding deadline passes, you can choose to continue with the donated amount or cancel the campaign</li>
+                        <li>If the milestones are not completed and approved by the supporter before the deadline date, the project will be canceled and you will be blacklisted.</li>
+                    </ul>
+                  </FormControl>
+                </FormItem>
                 <div className="flex items-center space-x-2 my-5">
                   <Checkbox id="terms" />
                   <label
@@ -289,7 +326,7 @@ export const CreateCampaignOne: React.FC<ProfileFormType> = ({
                   </label>
                 </div>
                 <Button>
-                  <Link href="/dashboard/campaign/mycampaign">
+                  <Link href="/dashboard/campaign/onboarding">
                     Submit Campaign
                   </Link>
                 </Button>

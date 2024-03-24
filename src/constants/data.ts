@@ -114,7 +114,7 @@ export const navItems: NavItem[] = [
   {
     title: "Feed",
     href: "/dashboard",
-    icon: "dashboard",
+    icon: "flame",
     label: "Feed",
   },
   {
@@ -134,6 +134,12 @@ export const navItems: NavItem[] = [
     href: "/dashboard/profile/myprofile",
     icon: "profile",
     label: "profile",
+  },
+  {
+    title: "Onboarding Campaigns",
+    href: "/dashboard/campaign/onboarding",
+    icon: "dashboard",
+    label: "Onboarding",
   },
   {
     title: "My Campaigns",

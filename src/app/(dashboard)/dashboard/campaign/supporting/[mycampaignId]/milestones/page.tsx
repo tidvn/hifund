@@ -7,21 +7,8 @@ import { CalendarDateRangePicker } from "@/components/common/date-range-picker";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/app/tabs/tab";
 import usdc from "@/public/images/usdc1.png";
 import { MilestoneDetails } from "@/types/milestones";
+import MilestoneConfirm from "@/components/app/campaign/milestones/milestoneConfirm";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import Link from "next/link";
-import { HeartHandshake } from "lucide-react";
 const milestoneDetails: MilestoneDetails[] = [
   {
     milestoneName: "1 - Selecting a beat",
@@ -144,60 +131,7 @@ export default function MilestonesDetails() {
           </h2>
           <div className="hidden md:flex items-center space-x-2">
             <CalendarDateRangePicker />
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button><HeartHandshake /> &nbsp;Donate</Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px] ">
-                <DialogHeader>
-                  <DialogTitle>Confirm donate this project</DialogTitle>
-                  <DialogDescription className=" text-left">
-
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="grid gap-4 py-4">
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Label htmlFor="name" className="text-left font-bold">
-                      Amount
-                    </Label>
-                    <Input id="name" placeholder="USDC" className="col-span-3" />
-                    <div className="col-span-4 italic text-sm">*The amount does not exceed the amount of the missing fund</div>
-                  </div>
-                  <div className="font-bold">Onboading From: Jan 20, 2023</div>
-                  <div className="font-bold">Onboading From: Feb 09, 2023</div>
-                  <div>
-                    <Label htmlFor="name" className="text-left font-bold">
-                      Platform terms and conditions
-                    </Label>
-                    <ul className="my-3 ml-6 list-disc [&>li]:mt-2">
-                      <li>The amount will be locked in the smart contract as a commitment</li>
-                      <li>Your money will be returned to your wallet if
-                        <ul className="ml-6 list-disc">
-                          <li>The creator confirms cancellation when onboarding ends</li>
-                          <li>Creators Miletones are not accepted until the deadline</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="terms" />
-                    <label
-                      htmlFor="terms"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Accept terms and conditions
-                    </label>
-                  </div>
-                </div>
-                <DialogFooter>
-                  <Button>
-                    <Link href="/dashboard/campaign/supporting">
-                      Confirm
-                    </Link>
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
+            <Button>Support</Button>
           </div>
         </div>
         <div className="p-6 bg-[#faf5ff] w-fit">
@@ -223,16 +157,21 @@ export default function MilestonesDetails() {
               <TabsTrigger value="mfinal">Milestone Final</TabsTrigger>
             </TabsList>
             <TabsContent value="m1">
-              <MilestoneDetailsTab milestone={milestoneDetails[0]} isSupported={false} />
+              <MilestoneDetailsTab milestone={milestoneDetails[0]} />
+              <MilestoneConfirm milestone={milestoneDetails[0]} />
             </TabsContent>
             <TabsContent value="m2">
-              <MilestoneDetailsTab milestone={milestoneDetails[1]} isSupported={false} />
+              <MilestoneDetailsTab milestone={milestoneDetails[1]} />
+              <MilestoneConfirm milestone={milestoneDetails[1]} />
+
             </TabsContent>
             <TabsContent value="m3">
-              <MilestoneDetailsTab milestone={milestoneDetails[2]} isSupported={false} />
+              <MilestoneDetailsTab milestone={milestoneDetails[2]} />
+              <MilestoneConfirm milestone={milestoneDetails[2]}/>
             </TabsContent>
             <TabsContent value="mfinal">
-              <MilestoneDetailsTab milestone={milestoneDetails[3]} isSupported={false} />
+              <MilestoneDetailsTab milestone={milestoneDetails[3]} />
+              <MilestoneConfirm milestone={milestoneDetails[3]}/>
             </TabsContent>
           </Tabs>
         </div>

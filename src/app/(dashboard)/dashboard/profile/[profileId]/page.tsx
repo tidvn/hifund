@@ -12,9 +12,63 @@ import CampaignCard from "@/components/app/campaign/CampaignCard";
 import { Button } from "@/components/ui/button";
 import { HeartHandshake } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
+import { CampaignPreview } from "@/types/campaign";
+import ava1 from "@/public/images/jack.jpeg";
+import ava2 from "@/public/images/ben.png";
+import ava3 from "@/public/images/jone.png";
+import ava4 from "@/public/images/avatar.jpg";
 const breadcrumbItems = [{ title: "Profile", link: "/dashboard/profile/1" }];
 
+const campaignCard:CampaignPreview[]=[
+  {
+    concept:"Singes",
+    name:"Chung Ta Cua Tuong Lai",
+    budget:"400",
+    desc:"A song recorded by Vietnamese singer and songwriter Son Tung M-TP in his debut studio EP, Us (2020). The song was recorded by Son Tung M-TP composed and performed, released in 2024 as a follow-up single to the EP after more than 3 years of absence.",
+    funded:"250",
+    ava:ava1.src
+  },
+  {
+    concept:"Artist",
+    name:"NFT Hat's Cat",
+    budget:"300",
+    desc:"It's time to VOTE for your favorite paintings. Please note that there are TWO albums for you to cast your votes in. Both of the albums are linked below. Voting ends 3/27/24 8:00 pm eastern standard time. Vote for as many as you would like. GOOD LUCK Everyone!",
+    funded:"100",
+    ava:ava2.src
+  },
+  {
+    concept:"Actors",
+    name:"A part of Picture",
+    budget:"250",
+    desc:"Congrats to all of the winners from the fun filled evening of ART GAMES!  Art Game Night Video now available from last night's fun!  You can check it out here",
+    funded:"90",
+    ava:ava3.src
+  },
+  {
+    concept:"Dancer",
+    name:"Sun in the space",
+    budget:"100",
+    desc:"Load up on your art supplies with these EXTREME spring sale prices here!  Discounts will appear at time of check out in your cart.",
+    funded:"80",
+    ava:ava4.src
+  },
+  {
+    concept:"Titok",
+    name:"Mar in universe",
+    budget:"150",
+    desc:"This is definitely a little under-produced by my recent standards. Could use a couple more drafts and a more creative set/wardrobe (you’ll recognize the top I auditioned in our most recent livestream lol)",
+    funded:"170",
+    ava:ava2.src
+  },
+  {
+    concept:"Album",
+    name:"Candy candy",
+    budget:"90",
+    desc:"Ten weeks ago I started work on a video I wanted to call  I did a couple years",
+    funded:"10",
+    ava:ava3.src
+  }
+];
 export default function page() {
   return (
     <ScrollArea className="h-full">
@@ -145,22 +199,22 @@ export default function page() {
                       </TabsContent>
                       <TabsContent value="myCampaigns">
                         <div className="mt-10 flex justify-between flex-wrap">
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
+                          <CampaignCard className="mb-6" campain={campaignCard[0]}/>
+                          <CampaignCard className="mb-6" campain={campaignCard[1]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[2]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[3]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[4]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[5]} />
                         </div>
                       </TabsContent>
                       <TabsContent value="mySupportingCampaigns">
                         <div className="mt-10 flex justify-between flex-wrap">
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
-                          <CampaignCard className="mb-6" />
+                          <CampaignCard className="mb-6" campain={campaignCard[0]}/>
+                          <CampaignCard className="mb-6" campain={campaignCard[1]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[2]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[3]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[4]} />
+                          <CampaignCard className="mb-6" campain={campaignCard[5]} />
                         </div>
                       </TabsContent>
                     </Tabs>
